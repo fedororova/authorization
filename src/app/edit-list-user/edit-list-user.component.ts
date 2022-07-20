@@ -37,12 +37,11 @@ export class EditListUserComponent implements OnInit {
     this.userAboutForm = this.fb.group({
       name: [null, [Validators.required]],
       login: [null, [Validators.required]],
-      password: [null, [Validators.required]]
+      password: [null, [Validators.required]],
     });
-
   }
   changeUser() {
-    this.users.map((n) => (n.id === +this.id ? { ...this.user } : n)); // modified
+    this.users.map((n) => (n.id === +this.id ? { ...this.user } : n)); // изменение пользователя
 
     localStorage.setItem('users', JSON.stringify(this.users));
     this.router.navigate(['/List']);

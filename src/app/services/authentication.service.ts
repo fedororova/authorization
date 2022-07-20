@@ -23,7 +23,7 @@ export class AuthenticationService {
     login(login: string, password: string) {
         return this.http.post<any>(`${environment.apiUrl}/users/authenticate`, { login, password })
             .pipe(map(user => {
-                // store user details and jwt token in local storage to keep user logged in between page refreshes
+                // хранить данные пользователя и токен jwt в локальном хранилище, чтобы пользователь оставался в системе между обновлениями страницы
                 localStorage.setItem('currentUser', JSON.stringify(user));
                 this.currentUserSubject.next(user);
                 return user;
@@ -31,7 +31,7 @@ export class AuthenticationService {
     }
 
     logout() {
-        // remove user from local storage to log user out
+        // удалить пользователя из локального хранилища, чтобы выйти из системы
         localStorage.removeItem('currentUser');
 
         // get the user nulled - typescript won't care

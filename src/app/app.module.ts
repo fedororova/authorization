@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
 import { registerLocaleData } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -58,7 +57,7 @@ registerLocaleData(en);
     ListUserComponent,
     AddListUserComponent,
     EditListUserComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -97,21 +96,19 @@ registerLocaleData(en);
       logOnly: environment.production,
     }),
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US },
+  providers: [
+    { provide: NZ_I18N, useValue: en_US },
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
-    // provider used to create fake backend
-    fakeBackendProvider],
+    // используется для создания фейкового бэкэнда
+    fakeBackendProvider,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
 
-export class NzDemoPageHeaderBasicComponent {
-  onBack(): void {
-    console.log('onBack');
-  }
-}
+export class NzDemoPageHeaderBasicComponent {}
 
 export class NzDemoPageHeaderGhostComponent {}
 export class NzDemoLayoutTopComponent {}

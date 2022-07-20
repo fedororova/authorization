@@ -22,40 +22,40 @@ nz-footer {
   text-align: center;
 }
 
-.p{
-  font-family: 'Andale Mono', monospace;
-    color: black;
-    font-weight: bold;
+.p {
+  font-family: "Andale Mono", monospace;
+  color: black;
+  font-weight: bold;
 }
 
-.ul{
-  font-family: 'Andale Mono', monospace;
+.ul {
+  font-family: "Andale Mono", monospace;
 }
 
-.ul li{
-  font-family: 'Andale Mono', monospace;
+.ul li {
+  font-family: "Andale Mono", monospace;
 }
 
-.p_center{
+.p_center {
   text-align: center;
   font-weight: bold;
   font-size: 25px;
-	line-height: 56px;
-	color: black;
-  font-family: 'Andale Mono', monospace;
-  }
+  line-height: 56px;
+  color: black;
+  font-family: "Andale Mono", monospace;
+}
 
-  .p_center span {
-    padding: 10px;
-    background: skyblue;
-    font-family: 'Andale Mono', monospace;
-  }
+.p_center span {
+  padding: 10px;
+  background: skyblue;
+  font-family: "Andale Mono", monospace;
+}
 
-  .button-menu{
-    margin-right: 8px;
-    margin-bottom: 12px;
-    background-color: #4682B4;
-    font-family: 'Andale Mono', monospace;
-    color: white;
-    font-weight: bold;
-  }
+.button-menu {
+  margin-right: 8px;
+  margin-bottom: 12px;
+  background-color: #4682b4;
+  font-family: "Andale Mono", monospace;
+  color: white;
+  font-weight: bold;
+}

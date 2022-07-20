@@ -13,7 +13,12 @@
   <tbody>
     <tr>
       <td>
-        <input nz-input type="text" [(ngModel)]="user.name" placeholder="Введите имя"/>
+        <input
+          nz-input
+          type="text"
+          [(ngModel)]="user.name"
+          placeholder="Введите имя"
+        />
       </td>
       <td>
         <nz-select [(ngModel)]="user.role">
@@ -25,10 +30,15 @@
         </nz-select>
       </td>
       <td>
-        <input nz-input type="text" [(ngModel)]="user.login"/>
+        <input nz-input type="text" [(ngModel)]="user.login" />
       </td>
       <td>
-        <input nz-input type="text" [(ngModel)]="user.password" placeholder="Введите пароль"/>
+        <input
+          nz-input
+          type="text"
+          [(ngModel)]="user.password"
+          placeholder="Введите пароль"
+        />
       </td>
       <td>
         <button nz-button type="submit" (click)="saveUser()">Добавить</button>

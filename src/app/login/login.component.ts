@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
         private router: Router,
         private authenticationService: AuthenticationService
     ) {
-        // redirect to home if already logged in
+        // перенаправить на список пользователей, если вы уже вошли в систему
         if (this.authenticationService.currentUserValue) {
             this.router.navigate(['/List']);
         }
@@ -31,13 +31,13 @@ export class LoginComponent implements OnInit {
         });
     }
 
-    // convenience getter for easy access to form fields
+    // удобный геттер для быстрого доступа к полям формы
     get f() { return this.loginForm.controls; }
 
     onSubmit() {
         this.submitted = true;
 
-        // stop here if form is invalid
+        // остановитесь здесь, если форма недействительна
         if (this.loginForm.invalid) {
             return;
         }
@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
             .pipe(first())
             .subscribe({
                 next: () => {
-                    // get return url from route parameters or default to '/'
+                    // получить обратный URL-адрес из параметров маршрута или по умолчанию '/List'
                     const returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/List';
                     this.router.navigate([returnUrl]);
                 },
