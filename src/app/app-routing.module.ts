@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AuthGuard } from './helpers/auth.guard';
+import { AuthGuard } from './guards/auth.guard';
 
-import { LoginComponent } from './login/login.component';
-import { MainComponent } from './start-page/main.component';
-import { AboutmePageComponent } from './aboutme-page/aboutme-page.component';
-import { YakutskSiteComponent } from './yakutsk-page/yakutsk-page.component';
-import { ListUserComponent } from './list-user/list-user.component';
-import { AddListUserComponent } from './add-list-user/add-list-user.component';
-import { EditListUserComponent } from './edit-list-user/edit-list-user.component';
-import { YakutskPageComponent } from './yakutsk-edit-page/yakutsk-page.component';
+import { LoginComponent } from './components/login/login.component';
+import { MainComponent } from './components/start-page/start-page.component';
+import { AboutmePageComponent } from './components/aboutme-page/aboutme-page/aboutme-page.component';
+import { YakutskSiteComponent } from './components/yakutsk-page/yakutsk-page.component';
+import { ListUserComponent } from './components/list-user/list-user/list-user.component';
+import { AddListUserComponent } from './components/add-list-user/add-list-user/add-list-user.component';
+import { EditListUserComponent } from './components/edit-list-user/edit-list-user/edit-list-user.component';
+import { YakutskPageComponent } from './components/yakutsk-edit-page/yakutsk-page.component';
 
 export const appRoutes: Routes = [
   { path: '', component: MainComponent },

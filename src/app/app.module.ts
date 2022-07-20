@@ -32,19 +32,19 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { environment } from '../environments/environment';
-import { fakeBackendProvider } from './helpers/fake-backend';
+import { fakeBackendProvider } from '../server/fake-backend';
 import { AppRoutingModule } from './app-routing.module';
-import { JwtInterceptor } from './helpers/jwt.interceptor';
-import { ErrorInterceptor } from './helpers/error.interceptor';
+import { JwtInterceptor } from './interceptors/jwt.interceptor';
+import { ErrorInterceptor } from './interceptors/error.interceptor';
 
-import { YakutskPageComponent } from './yakutsk-edit-page/yakutsk-page.component';
-import { MainComponent } from './start-page/main.component';
-import { AboutmePageComponent } from './aboutme-page/aboutme-page.component';
-import { YakutskSiteComponent } from './yakutsk-page/yakutsk-page.component';
-import { ListUserComponent } from './list-user/list-user.component';
-import { AddListUserComponent } from './add-list-user/add-list-user.component';
-import { EditListUserComponent } from './edit-list-user/edit-list-user.component';
-import { LoginComponent } from './login/login.component';
+import { YakutskPageComponent } from './components/yakutsk-edit-page/yakutsk-page.component';
+import { MainComponent } from './components/start-page/start-page.component';
+import { AboutmePageComponent } from './components/aboutme-page/aboutme-page/aboutme-page.component';
+import { YakutskSiteComponent } from './components/yakutsk-page/yakutsk-page.component';
+import { ListUserComponent } from './components/list-user/list-user/list-user.component';
+import { AddListUserComponent } from './components/add-list-user/add-list-user/add-list-user.component';
+import { EditListUserComponent } from './components/edit-list-user/edit-list-user/edit-list-user.component';
+import { LoginComponent } from './components/login/login.component';
 
 registerLocaleData(en);
 @NgModule({
