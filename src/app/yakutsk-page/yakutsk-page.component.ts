@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-yakutsk-site',
-  templateUrl: './yakutsk-site.component.html',
-  styleUrls: ['./yakutsk-site.component.css']
+  selector: 'app-yakutsk-page',
+  templateUrl: './yakutsk-page.component.html',
+  styleUrls: ['./yakutsk-page.component.css']
 })
 
 
