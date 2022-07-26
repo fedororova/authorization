@@ -1,0 +1,61 @@
+<nz-page-header-content>
+  <div nz-row nzJustify="space-around" nzAlign="middle">
+    <div nz-col nzFlex="2">
+      <img
+        nz-image
+        width="700px"
+        height="300px"
+        nzSrc="assets/img/number.png"
+        alt=""
+      />
+    </div>
+    <div nz-col nzFlex="0.3"></div>
+    <div nz-col nzFlex="5">
+      <p class="height-100"></p>
+      <h4 nz-typography>Информация о населении города Якутска</h4>
+
+      <form nz-form [formGroup]="myFirstReactiveForm" (ngSubmit)="onSubmit()">
+        <br />
+        <input
+          nz-input
+          type="text"
+          id="name"
+          formControlName="name"
+          id="userForm"
+        />
+        <div class="error" *ngIf="isControlInvalid('name')">
+          Текст может состоять только из российских букв
+        </div>
+        <br /><br />
+
+        <input
+          nz-input
+          type="text"
+          id="name2"
+          formControlName="name2"
+          id="userForm"
+        />
+        <br /><br />
+
+        <input
+          nz-input
+          type="text"
+          id="name3"
+          formControlName="name3"
+          id="userForm"
+        />
+        <br /><br />
+
+        <button
+          nz-button
+          nzType="primary"
+          type="submit"
+          (ngsubmit)="onSubmit()"
+        >
+          Сохранить
+        </button>
+      </form>
+    </div>
+  </div>
+  <br />
+</nz-page-header-content>

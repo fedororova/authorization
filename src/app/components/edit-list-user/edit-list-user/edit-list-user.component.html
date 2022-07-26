@@ -1,0 +1,57 @@
+<h4 nz-typography>Изменить данные пользователя:</h4>
+<br />
+<form nz-form [formGroup]="userAboutForm">
+  <nz-table #basicTable nzTemplateMode>
+    <thead>
+      <tr>
+        <th>Имя</th>
+        <th>Роль</th>
+        <th>Логин</th>
+        <th>Пароль</th>
+        <th>Действия</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <input
+            nz-input
+            type="text"
+            [(ngModel)]="user.name"
+            formControlName="name"
+          />
+        </td>
+        <td>
+          <nz-select [(ngModel)]="user.role">
+            <nz-option
+              *ngFor="let role of roles"
+              [nzValue]="role"
+              [nzLabel]="role"
+            ></nz-option>
+          </nz-select>
+        </td>
+        <td>
+          <input
+            nz-input
+            type="text"
+            [(ngModel)]="user.login"
+            formControlName="login"
+          />
+        </td>
+        <td>
+          <input
+            nz-input
+            type="text"
+            [(ngModel)]="user.password"
+            formControlName="password"
+          />
+        </td>
+        <td>
+          <button nz-button type="submit" (click)="changeUser()">
+            Сохранить изменения
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+</form>
